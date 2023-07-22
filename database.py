@@ -1,14 +1,14 @@
 def write_name(n):
-    with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "a", encoding="UTF-8") as file:
+    with open("phone.txt", "a", encoding="UTF-8") as file:
         file.write(n)
 
 def print_lst():
-    with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "r", encoding="UTF-8") as file:
+    with open("phone.txt", "r", encoding="UTF-8") as file:
         lst = file.readlines()
         print(*lst, sep='\n')   
 
 def search_line(s):
-    with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "r", encoding="UTF-8") as file:
+    with open("phone.txt", "r", encoding="UTF-8") as file:
         lst = file.readlines()
         lst = [line.rstrip() for line in lst]
         sd = []
@@ -22,24 +22,24 @@ def search_line(s):
             print('Данные отсутствуют!\n')        
 
 def delete_data(k):
-    with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "r", encoding="UTF-8") as file:
+    with open("phone.txt", "r", encoding="UTF-8") as file:
         lst = file.readlines()
         del lst[k-1]
         print(*lst, sep='\n')
-    with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "w", encoding="UTF-8") as file:     
+    with open("phone.txt", "w", encoding="UTF-8") as file:     
         file.writelines(lst)
 
 def correct_data(k, data):
-    with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "r", encoding="UTF-8") as file:
+    with open("phone.txt", "r", encoding="UTF-8") as file:
         lst = file.readlines()
         lst.insert(k-1,data)
         del lst[k]
         print(*lst, sep='\n')
-    with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "w", encoding="UTF-8") as file:    
+    with open("phone.txt", "w", encoding="UTF-8") as file:    
         file.writelines(lst)    
 
 def sort_data(sortp, sorts):
-    with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "r", encoding="UTF-8") as file:
+    with open("phone.txt", "r", encoding="UTF-8") as file:
         lst = file.readlines()
         print(*lst, sep='\n')
         print()
@@ -53,7 +53,7 @@ def sort_data(sortp, sorts):
             lst.sort(reverse = True, key = lambda x: x.split(',')[1])    
         print(*lst, sep='\n')
         print()
-        with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "w", encoding="UTF-8") as file:    
+        with open("phone.txt", "w", encoding="UTF-8") as file:    
             file.writelines(lst)
 
 

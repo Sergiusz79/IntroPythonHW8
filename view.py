@@ -14,7 +14,7 @@ def input_search():
     return s
 
 def input_data_del():
-    with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "r", encoding="UTF-8") as file:
+    with open("phone.txt", "r", encoding="UTF-8") as file:
         lst = file.readlines()
         print(*lst, sep='\n')
         print()
@@ -22,7 +22,7 @@ def input_data_del():
         return k
 
 def input_number_correct():
-    with open("D:\\Users\\Admin\\OneDrive\\Документы\\Учёба\\Programming\\PythonCourse\\Seminar008\\phone.txt", "r", encoding="UTF-8") as file:
+    with open("phone.txt", "r", encoding="UTF-8") as file:
         lst = file.readlines()
         print(*lst, sep='\n')
         print()

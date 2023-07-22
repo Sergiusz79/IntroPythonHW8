@@ -1,0 +1,29 @@
+from database import *
+from view import *
+
+def main_if():
+    while True:
+        num = input_num()
+        if num == 1:
+                name = input_name()
+                write_name(name)
+                print('Данные сохранены!\n')
+        elif num == 2:
+                s = input_search()
+                search_line(s)
+        elif num == 3:
+                name = input_name()
+                write_name(name)
+                print('Данные удалены!\n')
+        elif num == 4:
+                name = input_name()
+                write_name(name)
+                print('Поиск завершён!\n')
+        elif num == 5:
+                print()
+                return False
+        elif num == q:
+                print('До свидания!\n')
+                return False
+
+main_if()
